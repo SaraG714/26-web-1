@@ -59,13 +59,13 @@ export default function BatteryIndicator() {
       </div>
 
       {/* Representación visual dinámica */}
-      <div className="w-10 h-16 border-2 border-current relative p-1 flex flex-col-reverse">
+      <div className="w-5 h-9 border-2 border-current relative p-1 flex flex-col-reverse">
         <div 
           className={`w-full transition-all duration-500 ${isLowPower ? "bg-red-500" : "bg-emerald-500"}`}
           style={{ height: `${percentage}%` }}
         />
         {/* Parte superior de la pila */}
-        <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-2 bg-current" />
+        <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-2 h-1 bg-current" />
       </div>
 
       {/* Renderizado condicional de alerta visual */}

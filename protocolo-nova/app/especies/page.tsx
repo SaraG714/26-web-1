@@ -10,15 +10,10 @@ export default async function EspeciesPersonajesPage({
   // QUERY PARAMS URL?page=5&specie=alien
 
   // 1. Construimos la URL de la API dinámicamente
-  const currentPage = page || "1"
-  const speciesFilter = species ? `&species=${species}` : ''
-  const apiUrl = 
-  `https://rickandmortyapi.com/api/character?page=${currentPage}${speciesFilter}`
   // 2. SSR: Fetch de datos en el servidor
-  const res = await fetch(apiUrl);
-  const characters = await res.json()
   // 3. Mapeo para que aparezcan en pantalla ✅
 
+  
   return (
     <main className="p-8">
       <header className="mb-8 flex justify-between items-center">
